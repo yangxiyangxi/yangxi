@@ -1,0 +1,108 @@
+/*header*/
+.header{
+	height: 80px;
+	position: relative;
+	z-index: 1;
+}
+.header{
+	margin-top: 10px;
+	background: rgba(0,0,0,0);
+}
+.navbar-nav{
+	float: right;
+}
+.navbar-brand img{
+	position: relative;
+	top: -10px;
+}
+nav{
+	height: 80px;
+	background: rgba(0,0,0,0) !important;
+	border-bottom: none !important;
+}
+.collapse ul li a:hover{
+	border-bottom: 2px solid #FF8C00;
+}
+.collapse ul li:nth-child(3) a{
+	border-bottom: 2px solid #FF8C00;
+}
+.nav li a{
+	color: white !important;
+}
+.navbar-header button{
+	border: none;
+	color:#FF8C00;
+}
+.change{
+	background: white !important;
+}
+.change .nav a{
+	color: black !important;
+}
+@media (max-width:767px)
+    {
+      .nav{
+        float: none;
+        text-align: center;
+        background-color: white;
+        color:black !important;
+      }
+       .nav > li > a {
+        color: black !important;
+      }
+    }
+/*头部图片*/
+.serviceTopLayer{
+	margin-top: 80px;
+	min-height: 200px;
+	background: url(../img/service.jpg);
+}
+.navhelp{
+	margin-top: 90px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 200px;
+}
+/*正文*/
+.aboutSection div > h1 {
+    border-bottom: 2px #ff9700 solid;
+    font-weight: 100;
+    padding-bottom: 10px;
+    width: 285px;
+}
+/*footer*/
+/*footer*/
+.aboutCompany{
+	line-height: 35px;
+    margin-top: 20px;
+}
+.aboutCompany span{
+	float: left;
+    color: #8c8c8c;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.aboutCompany p{
+	color: #8c8c8c;
+    font-size: 10px;
+}
+.usefulLink{
+	line-height: 35px;
+}
+.usefulLink span,.usefulLink a{
+	color: #8c8c8c;
+	font-size: 12px;
+    margin-top: 11px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.serviceSection{
+	margin: 40px 0;
+}
+.copy{
+	background: #0f1721;
+    line-height: 50px;
+    color: #9e9e9e;
+    font-size: 12px;
+}

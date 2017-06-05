@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎注册</title>
+<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<script type="text/javascript" src="../jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../bootstrap/dist/js/bootstrap.js"></script>
+		 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    	<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+body{background-color:#eee;margin:0;padding:0;}
+.reg{width:400px;margin:15px;padding:20px;border:1px solid #ccc;background-color:#fff;}
+.reg .title{text-align:center;padding-bottom:10px;}
+.reg th{font-weight:normal;text-align:right;}
+.reg input{width:180px;border:1px solid #ccc;height:20px;padding-left:4px;}
+.reg .button{background-color:#0099ff;border:1px solid #0099ff;color:#fff;width:80px;height:25px;margin:0 5px;cursor:pointer;}
+.reg .td-btn{text-align:center;padding-top:10px;}
+</style>
+<script>
+	//检查两次输入密码是否一致
+	function checkForm(){
+		var pw1 = document.getElementById("pw1").value;
+		var pw2 = document.getElementById("pw2").value;
+		if(pw1 !== pw2){
+			alert('两次输入密码不一致！');
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<!--header-nav-->
+		<div class="header navbar-fixed-top">
+			<div class="container">
+				<nav class="navbar ">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#example-navbar-collapse">
+			
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="register.html">注册</a>
+					</div>
+					<div class="collapse navbar-collapse" id="example-navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li ><a href="../news.html">新闻动态</a></li>
+							<li><a href="../about.html">关于我们</a></li>
+							<li><a href="../contact.html">联系我们</a></li>
+							<li><a href="../business_culture.html">企业文化</a></li>
+
+							<li><a href="../message_board.php">留言板</a></li>
+							<li><a href="../land/land.html">登录</a></li>
+							<li><a href="../index.html">首页</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="container content">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<form method="post" action="register.php" onsubmit="return checkForm()" >
+						<table class="reg">
+							<tr><td class="title" colspan="2">欢迎注册新用户</td></tr>
+							<tr><th>用户名：</th><td><input type="text" name="username" /></td></tr>
+							<tr><th>邮箱：</th><td><input type="text" name="email" /></td></tr>
+							<tr><th>密码：</th><td><input type="password" name="password" id="pw1" /></td></tr>
+							<tr><th>确认密码：</th><td><input type="password" id="pw2" /></td></tr>
+							<tr><td colspan="2" class="td-btn">
+							<input type="submit" value="提交注册" class="button" />
+							<input type="reset" value="重新填写" class="button" />
+							</td></tr>
+						</table>
+					</form>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+			
+		</div>
+
+</body>
+</html>

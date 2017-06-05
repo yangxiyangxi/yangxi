@@ -1,0 +1,188 @@
+/*header*/
+.header{
+	height: 80px;
+	position: relative;
+	z-index: 1;
+}
+.header{
+	margin-top: 10px;
+	background: rgba(0,0,0,0);
+}
+.navbar-nav{
+	float: right;
+}
+.navbar-brand img{
+	position: relative;
+	top: -10px;
+}
+nav{
+	height: 80px;
+	background: rgba(0,0,0,0) !important;
+	border-bottom: none !important;
+}
+.collapse ul li a:hover{
+	border-bottom: 2px solid #FF8C00;
+}
+.collapse ul li:nth-child(4) a{
+	border-bottom: 2px solid #FF8C00;
+}
+.nav li a{
+	color: white !important;
+}
+.navbar-header button{
+	border: none;
+	color:#FF8C00;
+}
+.change{
+	background: white !important;
+}
+.change .nav a{
+	color: black !important;
+}
+@media (max-width:767px)
+    {
+      .nav{
+        float: none;
+        text-align: center;
+        background-color: white;
+        color:black !important;
+      }
+       .nav > li > a {
+        color: black !important;
+      }
+    }
+/*头部图片*/
+.aboutTopLayer{
+	margin-top: 80px;
+	min-height: 200px;
+	background: url(../img/cando.jpg);
+}
+.navhelp{
+	margin-top: 90px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 200px;
+}
+/*正文*/
+/*第一块*/
+.aboutSection div > h1 {
+    border-bottom: 2px #ff9700 solid;
+    font-weight: 100;
+    padding-bottom: 10px;
+    width: 285px;
+}
+.aboutSection{
+	margin-top: 80px;
+    margin-bottom: 80px;
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+ 
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+ 
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+ 
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.prev{
+	position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 52%;
+    left: 10px;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 27px;
+    background: transparent url(../img/arrow.png) no-repeat left top;
+    margin-top: -45px;
+    left: 10px;
+}
+.next{
+	position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 52%;
+    
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 27px;
+    background: transparent url(../img/arrow.png) no-repeat right top;
+    margin-top: -45px;
+    right: 10px;
+}
+/*第二块*/
+.borderCando{
+	border-top: 1px solid #d6d6d6;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*第二块*/
+.candoRow img{
+	display: block;
+	margin: 20px auto 0;
+	
+}
+/*footer*/
+.aboutCompany{
+	line-height: 35px;
+    margin-top: 20px;
+}
+.aboutCompany span{
+	float: left;
+    color: #8c8c8c;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.aboutCompany p{
+	color: #8c8c8c;
+    font-size: 10px;
+}
+.usefulLink{
+	line-height: 35px;
+}
+.usefulLink span,.usefulLink a{
+	color: #8c8c8c;
+	font-size: 12px;
+    margin-top: 11px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.serviceSection{
+	margin: 40px 0;
+}
+.copy{
+	background: #0f1721;
+    line-height: 50px;
+    color: #9e9e9e;
+    font-size: 12px;
+}

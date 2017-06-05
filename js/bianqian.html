@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			.wrap{
+				width: 1000px;
+				height: 582px;
+				margin: 0 auto;
+				background: url(../img/bianqian/body_bg.jpg);
+				/*overflow: hidden;*/
+				
+			}
+			/*.wrap:after{
+				height: 0;
+				content: "";
+				visibility: hidden;
+				clear: both;
+				display: block;
+			}*/
+			.header{
+				width: 800px;
+				height: 43px;
+				padding: 10px 10px;	
+			}
+			.header ul{
+				width: 300px;
+				height: 43px;
+				margin-left: 206px;
+			}
+			.header li{
+				width: 32px;
+				height: 32px;
+				margin-right: 3px;	
+				float: left;
+			}
+			.header li:nth-child(1){
+				background: url(../img/bianqian/add.png);
+			}
+			.header li:nth-child(2){
+				background: url(../img/bianqian/remove.png);
+			}
+			.header li:nth-child(3){
+				background: url(../img/bianqian/increase.png);
+			}
+			.header li:nth-child(4){
+				background: url(../img/bianqian/decrease.png);
+			}
+			.add{
+				width: 220px;
+				height: 220px;
+				border: 3px solid #F7F7F7 ;
+				margin:0px 40px 30px 10px;
+				float: left;
+				position: relative;
+				/*-webkit-border-radius-bottomleft:10px 500px ;
+				-webkit-border-radius-bottomright:500px 300px ;
+				-moz-border-radius-bottomleft:10px 500px ;
+				-moz-border-radius-bottomright:500px 300px ;
+				border-radius-bottomleft:10px 500px ;
+				border-radius-bottomright:500px 300px ;
+				-webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,.3);
+				/*-webkit-border-top-right-radius: 5px 100px;*/
+				 /*border: 3px solid white;*/
+				
+				-webkit-border-bottom-left-radius: 20px 500px;
+				-webkit-border-bottom-right-radius: 500px 30px;
+				-webkit-border-top-right-radius: 5px 100px;
+			    -moz-border-radius-bottomleft: 20px 500px;
+			    -moz-border-radius-bottomright: 500px 30px;
+			    -moz-border-radius-topright: 5px 100px;
+			    border-radius-bottomleft: 20px 500px;
+			    border-radius-bottomright: 500px 30px;
+			    border-radius-topright: 5px 100px;
+			    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,.2); 
+			    -moz-box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
+			    box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
+			    -moz-box-shadow: -7px 10px rgba(0,0,0,0.3);
+			    -webkit-box-shadow: -7px 10px rgba(0,0,0,0.3);
+			    box-shadow: -7px 10px rgba(0,0,0,0.3);
+
+			}
+			.oa{
+				display: block;
+				width: 24px;
+				height: 24px;
+				background-size: 100% 100%;
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				color: #DCDCDC;
+				background: #FF0000;
+			}
+			.op{
+				display: block;
+				width: 209px;
+				height: 140px;
+			}
+			
+			.ospan{
+				display: block;
+				width: 48px;
+				height: 48px;
+				background:url(../img/bianqian/pin.png) ;
+				position: absolute;
+				top: -35px;
+				right: 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<ul>
+					<li id="add"></li>
+					<li id="remove"></li>
+					<li id="increase"></li>
+					<li id="decrease"></li>
+				</ul>
+			</div>
+			<div id="box"></div>
+		</div>
+		<div class="write"></div>
+		<script type="text/javascript">
+			var oadd=document.getElementById("add");
+			var oremove=document.getElementById("remove");
+			var oincrease=document.getElementById("increase");
+			var odecrease=document.getElementById("decrease");
+			var obox=document.getElementById("box");
+			oadd.onclick=function(){
+				var odiv=document.createElement("div");
+				odiv.setAttribute("class","add");
+				odiv.innerHTML=new Date();
+				var oa=document.createElement("a");
+				oa.setAttribute("class","oa");
+				var op=document.createElement("p");
+				op.setAttribute("class","op");
+				var ospan=document.createElement("span");
+				ospan.setAttribute("class","ospan");
+				op.innerHTML="text here...";
+				oa.innerHTML="X";
+				oa.href="javascript:;"
+				obox.appendChild(odiv);
+				 for(var i=0;i<obox.children.length;i++){
+				 	
+		  	  	   obox.children[i].style.background=new Array("red" );
+			  	  }
+				
+			    odiv.appendChild(oa);
+			    odiv.appendChild(ospan);
+			    oa.appendChild(op);
+			    oa.onclick=function(){
+				obox.removeChild(this.parentNode);
+			}
+			    oremove.onclick=function(){
+			  	   for(var i=obox.children.length-1;i>=0;i--){
+//		  	  	   obox.removeChild(obox.children[i]);
+                   obox.children[i].style.display="none";
+			  	  }
+						}
+			  oincrease.onclick=function(){
+			  	for(var i=0;i<obox.children.length;i++){
+//			  	   obox.children[i].style.width=220px;
+//			  	   obox.children[i].style.height=220px;
+                   obox.children[i].style.height="300px";
+                    obox.children[i].style.width="300px";
+		  	  	  
+			  	  }
+			  }
+			  	odecrease.onclick=function(){
+			  	for(var i=0;i<obox.children.length;i++){
+                   obox.children[i].style.height="100px";
+                    obox.children[i].style.width="100px";
+		  	  	  
+			  	  }
+			  }
+			}
+		</script>
+	</body>
+</html>

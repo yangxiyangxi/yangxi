@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+<style>
+body{background-color:#eee;margin:0;padding:0;}
+.box{width:400px;margin:15px;padding:20px;border:1px solid #ccc;background-color:#fff;}
+.box h1{font-size:20px;text-align:center;}
+.profile-table{margin:0 auto;}
+.profile-table th{font-weight:normal;text-align:right;}
+.profile-table input[type="text"]{width:180px;border:1px solid #ccc;height:22px;padding-left:4px;}
+.profile-table .button{background-color:#0099ff;border:1px solid #0099ff;color:#fff;width:80px;height:25px;margin:0 5px;cursor:pointer;}
+.profile-table .td-btn{text-align:center;padding-top:10px;}
+.profile-table th,.profile-table td{padding-bottom:10px;}
+.profile-table td{font-size:14px;}
+.profile-table .txttop{vertical-align:top;}
+.profile-table select{border:1px solid #ccc;min-width:80px;height:25px;}
+.profile-table .description{font-size:13px;width:250px;height:60px;border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="box">
+	<h1>用户个人资料</h1>
+	<form method="post" action="add.php">
+	<table class="profile-table">
+		<tr><th>昵称：</th><td><input type="text" name="nickname" /></td></tr>
+		<tr><th>性别：</th><td>
+			<input type="radio" name="gender" value="男" id="male" /><label for="male">男</label>
+			<input type="radio" name="gender" value="女" id="female" /><label for="female">女</label>
+		</td></tr>
+		<tr><th>邮箱：</th><td><input type="text" name="email" /></td></tr>
+		<tr><th>QQ号：</th><td><input type="text" name="qq" /></td></tr>
+		<tr><th>个人主页：</th><td><input type="text" name="url" /></td></tr>
+		<tr><th>所在城市：</th><td>
+			<select name="city">
+				<option value="未选择">未选择</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="广州">广州</option>
+				<option value="其他">其他</option>
+			</select>
+		</td></tr>
+		<tr><th>语言技能：</th><td>
+			<input type="checkbox" name="skill[]" id="ck1" value="HTML" /><label for="ck1">HTML</label>
+			<input type="checkbox" name="skill[]" id="ck2" value="JavaScript" /><label for="ck2">JavaScript</label>
+			<input type="checkbox" name="skill[]" id="ck3" value="PHP" /><label for="ck3">PHP</label>
+			<input type="checkbox" name="skill[]" id="ck4" value="C++" /><label for="ck4">C++</label>
+		</td></tr>
+		<tr><th class="txttop">自我介绍：</th><td><textarea class="description" name="description"></textarea></td></tr>
+		<tr><td colspan="2" class="td-btn">
+		<input type="submit" value="注册" class="button" />
+		<input type="reset" value="重置" class="button" />
+		</td></tr>
+	</table>
+	</form>
+</div>
+</body>
+</html>

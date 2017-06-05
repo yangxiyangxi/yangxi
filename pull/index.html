@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 212px;
+				height:auto;
+				float: left;
+				margin: 5px;
+			}
+			.content{
+				padding: 10px;
+				border:1px solid #ccc;
+				box-shadow: 0 0 5px #ccc; 
+				border-radius: 5px;
+			}
+			.content img{
+				width: 190px;
+				height:auto;
+				display: block;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<div class="content"><img src="img/1.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/2.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/3.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/4.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/5.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/6.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/7.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/8.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/9.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/10.jpg" alt="" /></div>
+			</div>
+			<!--=====================-->
+			<div class="box">
+				<div class="content"><img src="img/1.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/2.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/3.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/4.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/5.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/6.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/7.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/8.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/9.jpg" alt="" /></div>
+			</div>
+			<div class="box">
+				<div class="content"><img src="img/10.jpg" alt="" /></div>
+			</div>
+			
+			
+			
+		</div>
+		
+		
+		<script src="jquery-1.12.1.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					
+					var box=$(".box");//获得所有的box 
+					//alert(box);object jquery对象
+					//console.log(box.size());//10
+					var boxWidth=box.eq(0).width();//每个box的宽度  每个box宽度都是固定的
+					//console.log(boxWidth);//212 
+					var num=Math.floor($(window).width()/boxWidth);//得到每行的box的个数
+					//console.log(num);
+					var boxArr=[];//声明一个空数组 用来存每行盒子的高度
+					
+					box.each(function(index,value){
+						//console.log(index+":"+value);	
+						//console.log(index+":"+$(this).height());
+						var boxHeight=box.eq(index).height();//拿到每个box的高度
+						if(index<num){
+							boxArr[index]=boxHeight;
+						}else{
+							var minboxHeight=Math.min.apply(null,boxArr);
+							console.log(minboxHeight);
+							var minboxIndex=$.inArray(minboxHeight,boxArr);
+							console.log(minboxIndex);
+							
+							$(value).css({
+								"position":"absolute",
+								"top":minboxHeight,
+								"left":box.eq(minboxIndex).position().left
+							});
+							boxArr[minboxIndex]+=box.eq(index).height();
+						}
+						
+						
+						
+						
+					});
+					console.log(boxArr);
+					
+//					var minboxHeight=Math.min.apply(null,boxArr);
+//						console.log(minboxHeight);
+//						var minboxIndex=$.inArray(minboxHeight,boxArr);
+//						console.log(minboxIndex);
+					
+					
+					/*for(var i=0;i<num;i++){
+						console.log(i+":"+box.eq(i).height());
+					}*/
+					
+					
+					
+					
+					
+					
+				});
+			</script>
+	</body>
+</html>
